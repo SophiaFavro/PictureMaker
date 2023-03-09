@@ -1,4 +1,5 @@
 var colorPicker;
+var currentColor;
 
 function setup() {
     let canvas = createCanvas(windowWidth, windowHeight);
@@ -19,6 +20,9 @@ function setup() {
   function draw() {
   }
 
-  function mousePressed() {
-
+  function mouseDragged() {
+    if(mouseIsPressed === true) {
+        stroke(colorPicker.color());
+        line(mouseX, mouseY, pmouseX, pmouseY);
+    }
   }
