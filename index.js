@@ -14,10 +14,16 @@ function setup() {
     text("press s for square", 25, 175);
     let rectangle = rect(25, 200, 50, 100);
     text("press r for rectangle", 25, 325);
-    
+    saveButton = createButton("Save");
+    saveButton.position(25, 425);
+    saveButton.mousePressed(saveImage);
+  }
+  
+  function draw() {
   }
 
-  function draw() {
+  function saveImage() {
+    save("Mycanvas.jpg");
   }
 
   function mouseDragged() {
